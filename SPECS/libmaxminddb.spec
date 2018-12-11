@@ -1,6 +1,6 @@
 Name:           libmaxminddb
 Summary:        C library for the MaxMind DB file format
-Version:        1.2.0
+Version:        1.3.2
 Release:        1%{?dist}
 URL:            https://maxmind.github.io/libmaxminddb
 Source0:        https://github.com/maxmind/%{name}/releases/download/%{version}/%{name}-%{version}.tar.gz
@@ -61,6 +61,10 @@ rm -fv %{buildroot}%{_libdir}/*.la
 %{_mandir}/man3/*
 
 %changelog
+* Tue Dec 4 2018 Karl Johnson <karljohnson.it@gmail.com> 1.3.2-1
+- Rebase package from EPEL
+- Bump to 1.3.2
+
 * Sun Mar 27 2016 Jan Vcelak <jvcelak@fedoraproject.org> 1.2.0-1
 - rebase to new version
 
