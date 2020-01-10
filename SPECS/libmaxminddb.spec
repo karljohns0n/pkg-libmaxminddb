@@ -1,21 +1,23 @@
-Name:           libmaxminddb
-Summary:        C library for the MaxMind DB file format
-Version:        1.3.2
-Release:        1%{?dist}
-URL:            https://maxmind.github.io/libmaxminddb
-Source0:        https://github.com/maxmind/%{name}/releases/download/%{version}/%{name}-%{version}.tar.gz
+Name:				libmaxminddb
+Summary:			C library for the MaxMind DB file format
+Version:			1.3.2
+Release:			2%{?dist}
+Group:				System/Libraries
+URL:				https://maxmind.github.io/libmaxminddb
+Source0:			https://github.com/maxmind/%{name}/releases/download/%{version}/%{name}-%{version}.tar.gz
+License:			ASL 2.0 and BSD
 
-# original libmaxminddb code is Apache Licence 2.0
-# src/maxminddb-compat-util.h is BSD
-License:        ASL 2.0 and BSD
+BuildRequires:		gcc
+BuildRequires:		perl-interpreter
 
 %description
 The package contains libmaxminddb library.
 
 %package devel
-Requires:       %{name}%{?_isa} = %{version}-%{release}
-Requires:       pkgconfig
-Summary:        Development header files for libmaxminddb
+Requires:			%{name}%{?_isa} = %{version}-%{release}
+Requires:			pkgconfig
+Summary:			Development header files for libmaxminddb
+Group:				System/Libraries
 
 %description devel
 The package contains development header files for the libmaxminddb library
@@ -61,6 +63,9 @@ rm -fv %{buildroot}%{_libdir}/*.la
 %{_mandir}/man3/*
 
 %changelog
+* Fri Jan 10 2020 Karl Johnson <karljohnson.it@gmail.com> 1.3.2-2
+- Add CentOS 8 support
+
 * Tue Dec 4 2018 Karl Johnson <karljohnson.it@gmail.com> 1.3.2-1
 - Rebase package from EPEL
 - Bump to 1.3.2
