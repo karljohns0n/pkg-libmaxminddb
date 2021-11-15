@@ -1,7 +1,7 @@
 Name:				libmaxminddb
 Summary:			C library for the MaxMind DB file format
-Version:			1.3.2
-Release:			2%{?dist}
+Version:			1.6.0
+Release:			1%{?dist}
 Group:				System/Libraries
 URL:				https://maxmind.github.io/libmaxminddb
 Source0:			https://github.com/maxmind/%{name}/releases/download/%{version}/%{name}-%{version}.tar.gz
@@ -63,6 +63,9 @@ rm -fv %{buildroot}%{_libdir}/*.la
 %{_mandir}/man3/*
 
 %changelog
+* Mon Nov 15 2021 Karl Johnson <karljohnson.it@gmail.com> 1.6.0-1
+- Bump to 1.6.0
+
 * Fri Jan 10 2020 Karl Johnson <karljohnson.it@gmail.com> 1.3.2-2
 - Add CentOS 8 support
 
