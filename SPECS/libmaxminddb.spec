@@ -1,7 +1,7 @@
 Name:				libmaxminddb
 Summary:			C library for the MaxMind DB file format
 Version:			1.6.0
-Release:			1%{?dist}
+Release:			2%{?dist}
 Group:				System/Libraries
 URL:				https://maxmind.github.io/libmaxminddb
 Source0:			https://github.com/maxmind/%{name}/releases/download/%{version}/%{name}-%{version}.tar.gz
@@ -9,6 +9,10 @@ License:			ASL 2.0 and BSD
 
 BuildRequires:		gcc
 BuildRequires:		perl-interpreter
+
+%if 0%{?rhel} >= 8
+BuildRequires:		perl-FindBin
+%endif
 
 %description
 The package contains libmaxminddb library.
@@ -63,11 +67,14 @@ rm -fv %{buildroot}%{_libdir}/*.la
 %{_mandir}/man3/*
 
 %changelog
+* Fri Jul 15 2022 Karl Johnson <karljohnson.it@gmail.com> 1.6.0-2
+- Add EL9 support
+
 * Mon Nov 15 2021 Karl Johnson <karljohnson.it@gmail.com> 1.6.0-1
 - Bump to 1.6.0
 
 * Fri Jan 10 2020 Karl Johnson <karljohnson.it@gmail.com> 1.3.2-2
-- Add CentOS 8 support
+- Add EL8 support
 
 * Tue Dec 4 2018 Karl Johnson <karljohnson.it@gmail.com> 1.3.2-1
 - Rebase package from EPEL
