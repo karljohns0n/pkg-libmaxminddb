@@ -10,7 +10,7 @@ License:			ASL 2.0 and BSD
 BuildRequires:		gcc
 BuildRequires:		perl-interpreter
 
-%if 0%{?rhel} >= 8
+%if 0%{?rhel} == 9
 BuildRequires:		perl-FindBin
 %endif
 
