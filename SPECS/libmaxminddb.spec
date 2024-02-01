@@ -67,7 +67,7 @@ rm -fv %{buildroot}%{_libdir}/*.la
 %{_mandir}/man3/*
 
 %changelog
-* Wed Jan 31 2023 Karl Johnson <karljohnson.it@gmail.com> 1.9.1-1
+* Wed Jan 31 2024 Karl Johnson <karljohnson.it@gmail.com> 1.9.1-1
 - Bump to 1.9.1
 
 * Mon May 8 2023 Karl Johnson <karljohnson.it@gmail.com> 1.7.1-1
