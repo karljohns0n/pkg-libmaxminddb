@@ -1,6 +1,6 @@
 Name:				libmaxminddb
 Summary:			C library for the MaxMind DB file format
-Version:			1.9.1
+Version:			1.10.0
 Release:			1%{?dist}
 Group:				System/Libraries
 URL:				https://maxmind.github.io/libmaxminddb
@@ -67,6 +67,9 @@ rm -fv %{buildroot}%{_libdir}/*.la
 %{_mandir}/man3/*
 
 %changelog
+* Mon Jul 8 2024 Karl Johnson <karljohnson.it@gmail.com> 1.10.1-1
+- Bump to 1.10.0
+
 * Wed Jan 31 2024 Karl Johnson <karljohnson.it@gmail.com> 1.9.1-1
 - Bump to 1.9.1
 
