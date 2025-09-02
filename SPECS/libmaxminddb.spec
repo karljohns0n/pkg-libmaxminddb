@@ -1,7 +1,7 @@
 Name:				libmaxminddb
 Summary:			C library for the MaxMind DB file format
 Version:			1.12.2
-Release:			1%{?dist}
+Release:			2%{?dist}
 Group:				System/Libraries
 URL:				https://maxmind.github.io/libmaxminddb
 Source0:			https://github.com/maxmind/%{name}/releases/download/%{version}/%{name}-%{version}.tar.gz
@@ -10,7 +10,7 @@ License:			ASL 2.0 and BSD
 BuildRequires:		gcc
 BuildRequires:		perl-interpreter
 
-%if 0%{?rhel} == 9
+%if 0%{?rhel} >= 9
 BuildRequires:		perl-FindBin
 %endif
 
@@ -67,6 +67,9 @@ rm -fv %{buildroot}%{_libdir}/*.la
 %{_mandir}/man3/*
 
 %changelog
+* Mon Sep 1 2025 Karl Johnson <karljohnson.it@gmail.com> 1.12.2-2
+- Add el10 support
+
 * Thu Apr 24 2025 Karl Johnson <karljohnson.it@gmail.com> 1.12.2-1
 - Bump to 1.12.2
 
