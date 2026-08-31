@@ -1,7 +1,7 @@
 Name:				libmaxminddb
 Summary:			C library for the MaxMind DB file format
-Version:			1.12.2
-Release:			2%{?dist}
+Version:			1.13.3
+Release:			1%{?dist}
 Group:				System/Libraries
 URL:				https://maxmind.github.io/libmaxminddb
 Source0:			https://github.com/maxmind/%{name}/releases/download/%{version}/%{name}-%{version}.tar.gz
@@ -67,6 +67,9 @@ rm -fv %{buildroot}%{_libdir}/*.la
 %{_mandir}/man3/*
 
 %changelog
+* Mon Aug 31 2026 Karl Johnson <karljohnson.it@gmail.com> 1.13.3-1
+- Bump to 1.13.3
+
 * Mon Sep 1 2025 Karl Johnson <karljohnson.it@gmail.com> 1.12.2-2
 - Add el10 support
 
